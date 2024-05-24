@@ -1,0 +1,58 @@
+.video-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Style for video element */
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+h1 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.container {
+  background-color: rgba(19, 18, 18, 0.5);
+  backdrop-filter: blur(0.1px);
+  max-width: 50%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+/* Loading screen styles */
+#loading-screen {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 50vh;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.close:focus {
+  outline: none; /* or border: none; */
+}

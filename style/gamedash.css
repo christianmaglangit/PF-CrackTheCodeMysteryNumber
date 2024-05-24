@@ -1,0 +1,90 @@
+/* Style for video container */
+.video-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Style for video element */
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.selectd {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.score {
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 5px;
+}
+.title {
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.container {
+  background-color: rgba(19, 18, 18, 0.5);
+  backdrop-filter: blur(0.1px);
+  max-width: 80%;
+  border-radius: 10px;
+}
+#backButton {
+  width: auto;
+  background-color: transparent;
+  border: none;
+}
+#backButton img {
+  /* transform: rotate(180deg); */
+  transition: transform 0.7s ease-in-out;
+}
+#backButton img:hover {
+  transform: rotate(360deg);
+}
+#backButton:focus {
+  outline: none; /* or border: none; */
+}
+#settingsButton {
+  width: auto;
+  background-color: transparent;
+  border: none;
+}
+#settingsButton img {
+  transition: transform 0.7s ease-in-out;
+}
+#settingsButton img:hover {
+  transform: rotate(160deg);
+}
+#settingsButton:focus {
+  outline: none; /* or border: none; */
+}
+.close:focus {
+  outline: none; /* or border: none; */
+}
+#giveUpMessage {
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+#timer {
+  font-size: 30px;
+  font-weight: 700;
+}
+#countdown {
+  font-size: 20px;
+  font-weight: 500;
+}

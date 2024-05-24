@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number Game</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style/index.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="video-container">
+      <video autoplay loop muted>
+        <source src="video/numbers.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <audio autoplay loop id="happygame">
+        <source src="music/sample.wav" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <audio id="click" src="music/click.mp3" preload="auto"></audio>
+    <div class="container justify-content-center align-items-center mt-5">
+      <div class="row justify-content-center mt-5">
+        <div class="pb-5">
+          <!-- Title -->
+
+          <h1 class="text-center mb-5 text-light mt-5">
+            Crack the Code : Mystery Number
+          </h1>
+          <!-- Start Button -->
+          <div class="buttons">
+            <button
+              id="startButton"
+              class="btn btn-primary btn-lg btn-block mt-3 w-50"
+            >
+              Play Now
+            </button>
+            <!-- Info Button -->
+            <button
+              id="infoButton"
+              class="btn btn-info btn-lg btn-block mt-3 w-50"
+            >
+              Info
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="infoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="infoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="infoModalLabel">Info</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Add your modal content here -->
+            <p>
+              Guess the number that we provide There are 3 difficulties Easy,
+              Medium and Hard. Those difficulties have the same chancesand there
+              are 5 chances.
+            </p>
+
+            <p>
+              Every guess you made there's a hint provided if your guesses are
+              to high or to low.
+            </p>
+
+            <p>
+              If you run out of chances you lose the game but you can play
+              again.
+            </p>
+
+            <p>
+              If you make 5 scores without giving up and run out of chances, a
+              surprise reward is waiting for you.
+            </p>
+            <p>
+              If you want to give up you can give up and we will provide the
+              random number you give up.
+            </p>
+
+            <h5>
+              More surprising updates are waiting for you this coming winter.
+            </h5>
+            <h6>Coming updates :</h6>
+            <span class="pt-0">- 2 players can play</span>
+            <p class="pt-0">
+              - Name of players and highest score will display and many more.
+            </p>
+
+            <span class="pt-2">Game Version 1.0 </span>
+            <p>Developers : PF 102 - Group 4</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="difficultyModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="difficultyModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="difficultyModalLabel">
+              Select Difficulty
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Select the difficulty level:</p>
+            <button id="easyDifficulty" class="btn btn-primary">Easy</button>
+            <button id="mediumDifficulty" class="btn btn-primary">
+              Medium
+            </button>
+            <button id="hardDifficulty" class="btn btn-primary">Hard</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Loading screen -->
+    <div id="loading-screen">Loading...</div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Your JavaScript code -->
+    <script src="javascript/index.js"></script>
+  </body>
+</html>
