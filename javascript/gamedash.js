@@ -238,6 +238,7 @@ function decrementRemainingGuesses() {
     message.textContent = `You've used all your guesses! The number was ${randomNumber}. Game over!`;
     message.style.color = "red";
     guessField.disabled = true;
+    document.getElementById("selectdif").style.display = "inline-block";
     document.getElementById("submitGuessButton").style.display = "none";
     document.getElementById("giveUpButton").style.display = "none";
     // document.getElementById("secretButton").style.display = "none";
