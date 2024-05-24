@@ -69,6 +69,8 @@ let score = 0;
 let guessedCorrectly = false;
 let initialRemainingGuesses;
 document.getElementById("guessField").disabled = true;
+document.getElementById("submitGuessButton").disabled = true;
+document.getElementById("giveUpButton").disabled = true;
 function setDifficulty() {
   const difficulty = document.getElementById("difficulty").value;
   switch (difficulty) {
@@ -77,18 +79,24 @@ function setDifficulty() {
       maxNumber = 20;
       remainingGuesses = 5;
       guessField.disabled = false;
+      submitGuessButton.disabled = false;
+      giveUpButton.disabled = false;
       break;
     case "medium":
       minNumber = 1;
       maxNumber = 50;
       remainingGuesses = 5;
       guessField.disabled = false;
+      submitGuessButton.disabled = false;
+      giveUpButton.disabled = false;
       break;
     case "hard":
       minNumber = 1;
       maxNumber = 100;
       remainingGuesses = 5;
       guessField.disabled = false;
+      submitGuessButton.disabled = false;
+      giveUpButton.disabled = false;
       break;
     default:
       minNumber = 1;
