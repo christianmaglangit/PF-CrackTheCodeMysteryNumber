@@ -268,7 +268,7 @@ function giveUp() {
   resetGame();
   setTimeout(function () {
     // Redirect to index.html
-    window.location.href = "gamedash.html";
+    window.location.href = "indexgamedash.html";
   }, 5000);
 }
 
@@ -314,7 +314,7 @@ function selectdif() {
   document.getElementById("remainingGuesses").textContent = remainingGuesses;
   setTimeout(function () {
     // Redirect to index.html
-    window.location.href = "gamedash.html";
+    window.location.href = "indexgamedash.html";
   }, 900);
 }
 
