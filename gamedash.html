@@ -37,19 +37,19 @@
     >
       <div class="backinfobtn d-flex justify-content-between">
         <button id="backButton" class="mt-3" alt="Back">
-          <img src="photo/back.png" alt="Back" />
+          <img src="photo/back.png" class="img-fluid" alt="Back" />
         </button>
         <button id="settingsButton" class="mt-3">
-          <img src="photo/settings.png" alt="Settings" />
+          <img src="photo/settings.png" class="img-fluid" alt="Settings" />
         </button>
       </div>
-      <h1 class="text-center title text-light pt-3">
+      <h1 class="htitle text-center text-light pt-3">
         Crack the Code : Mystery Number
       </h1>
       <div class="row justify-content-center mt-3">
-        <div class="">
+        <div class="select">
           <p class="text-light selectd">Select Difficulty:</p>
-          <select id="difficulty" class="form-control">
+          <select id="difficulty" class="form-control form-select">
             <option selected id="selected">Select</option>
             <option id="easy" value="easy">Easy (1-20)</option>
             <option id="medium" value="medium">Medium (1-50)</option>
@@ -129,6 +129,7 @@
             id="secretButton"
             onclick="revealSecret()"
             class="btn btn-warning ml-2"
+            style="display: none"
           >
             i
           </button>
