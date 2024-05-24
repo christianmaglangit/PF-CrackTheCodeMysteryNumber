@@ -75,25 +75,25 @@ function setDifficulty() {
     case "easy":
       minNumber = 1;
       maxNumber = 20;
-      remainingGuesses = 5; // 3 chances for easy
+      remainingGuesses = 5;
       guessField.disabled = false;
       break;
     case "medium":
       minNumber = 1;
       maxNumber = 50;
-      remainingGuesses = 5; // 4 chances for medium
+      remainingGuesses = 5;
       guessField.disabled = false;
       break;
     case "hard":
       minNumber = 1;
       maxNumber = 100;
-      remainingGuesses = 5; // 5 chances for hard
+      remainingGuesses = 5;
       guessField.disabled = false;
       break;
     default:
       minNumber = 1;
       maxNumber = 100;
-      remainingGuesses = 5; // Default to 3 chances
+      remainingGuesses = 0;
       break;
   }
   document.getElementById("remainingGuesses").textContent = remainingGuesses; // Update remaining guesses display
