@@ -54,10 +54,10 @@ document
     const clickSound = document.getElementById("click");
     clickSound.play();
   });
-document.getElementById("secretButton").addEventListener("click", function () {
-  const clickSound = document.getElementById("click");
-  clickSound.play();
-});
+// document.getElementById("secretButton").addEventListener("click", function () {
+//   const clickSound = document.getElementById("click");
+//   clickSound.play();
+// });
 document.getElementById("backButton").addEventListener("click", function () {
   const clickSound = document.getElementById("click");
   clickSound.play();
@@ -124,7 +124,7 @@ function resetGame() {
   // Show all buttons except the "Start Again" button
   document.getElementById("submitGuessButton").style.display = "inline-block";
   document.getElementById("giveUpButton").style.display = "inline-block";
-  document.getElementById("secretButton").style.display = "inline-block";
+  // document.getElementById("secretButton").style.display = "inline-block";
   document.getElementById("startAgainButton").style.display = "none";
 
   message.style.display = "none";
@@ -191,7 +191,7 @@ function checkGuess() {
     // Hide buttons
     document.getElementById("submitGuessButton").style.display = "none";
     document.getElementById("giveUpButton").style.display = "none";
-    document.getElementById("secretButton").style.display = "none";
+    // document.getElementById("secretButton").style.display = "none";
 
     // Show "Next Guess" button
     document.getElementById("nextGuessButton").style.display = "inline-block";
@@ -232,7 +232,7 @@ function decrementRemainingGuesses() {
     guessField.disabled = true;
     document.getElementById("submitGuessButton").style.display = "none";
     document.getElementById("giveUpButton").style.display = "none";
-    document.getElementById("secretButton").style.display = "none";
+    // document.getElementById("secretButton").style.display = "none";
     document.getElementById("startAgainButton").style.display = "inline-block";
     score = 0; // Reset score only when the game is over
   } else {
@@ -268,7 +268,7 @@ function giveUp() {
   resetGame();
   setTimeout(function () {
     // Redirect to index.html
-    window.location.href = "indexgamedash.html";
+    window.location.href = "gamedash.html";
   }, 5000);
 }
 
@@ -314,7 +314,7 @@ function selectdif() {
   document.getElementById("remainingGuesses").textContent = remainingGuesses;
   setTimeout(function () {
     // Redirect to index.html
-    window.location.href = "indexgamedash.html";
+    window.location.href = "gamedash.html";
   }, 900);
 }
 
@@ -323,9 +323,9 @@ function nextGuess() {
   resetGame();
 }
 
-function revealSecret() {
-  alert(`The secret number is ${randomNumber}`);
-}
+// function revealSecret() {
+//   alert(`The secret number is ${randomNumber}`);
+// }
 
 // Set default difficulty
 setDifficulty();

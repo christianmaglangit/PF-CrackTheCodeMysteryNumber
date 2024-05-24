@@ -13,7 +13,7 @@ document.getElementById("startButton").addEventListener("click", function () {
   // Start a timer to redirect to index.html after 5 seconds
   setTimeout(function () {
     // Redirect to index.html
-    window.location.href = "indexgamedash.html";
+    window.location.href = "gamedash.html";
   }, 5000); // 5 seconds
 });
 
