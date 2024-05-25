@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // Play background music
+  var happygame = document.getElementById("happygame");
+  happygame.play();
+});
 // Lower the volume of the happygame audio to 2
 document.getElementById("happygame").volume = 0.2;
 

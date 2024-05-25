@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // Play background music
+  var backgroundMusic = document.getElementById("backgroundMusic");
+  backgroundMusic.play();
+});
+
 let countdown = 5; // Initial countdown value
 let countdownInterval; // Interval ID for countdown
 
@@ -183,7 +189,7 @@ function checkGuess() {
     message.style.display = "block";
     message.textContent = "Please enter a valid number.";
     message.style.color = "red";
-    empty.play();
+    higlowhMusic.play();
     return; // Exit the function early if the input is invalid
   }
 
@@ -196,12 +202,12 @@ function checkGuess() {
     document.getElementById("score").textContent = score;
     wonMusic.play();
 
+    // Reset remaining guesses to initial value
+    remainingGuesses = initialRemainingGuesses;
+
     // Hide buttons
     document.getElementById("submitGuessButton").style.display = "none";
     document.getElementById("giveUpButton").style.display = "none";
-    // document.getElementById("secretButton").style.display = "none";
-
-    // Show "Next Guess" button
     document.getElementById("nextGuessButton").style.display = "inline-block";
 
     if (score === 5) {
@@ -241,13 +247,12 @@ function decrementRemainingGuesses() {
     document.getElementById("selectdif").style.display = "inline-block";
     document.getElementById("submitGuessButton").style.display = "none";
     document.getElementById("giveUpButton").style.display = "none";
+    //secret button Here
     // document.getElementById("secretButton").style.display = "none";
     document.getElementById("startAgainButton").style.display = "inline-block";
     score = 0; // Reset score only when the game is over
   } else {
     message.style.display = "block";
-
-    // Do not reset the score here
   }
   document.getElementById("score").textContent = score;
   document.getElementById("remainingGuesses").textContent = remainingGuesses; // Update remaining guesses display
@@ -256,7 +261,6 @@ function decrementRemainingGuesses() {
 }
 
 function giveUp() {
-  // Show the give up message in the modal
   const randomNumber =
     Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
   const giveUpMessage = `The number was ${randomNumber}. Better luck next time!`;
@@ -329,6 +333,8 @@ function selectdif() {
 
 function nextGuess() {
   guessField.disabled = false;
+  // Update remaining guesses display
+  document.getElementById("remainingGuesses").textContent = remainingGuesses;
   resetGame();
 }
 
