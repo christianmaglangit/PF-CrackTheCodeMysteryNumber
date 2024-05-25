@@ -106,7 +106,7 @@ video {
     font-size: 15px;
   }
   #difficulty {
-    max-height: 35px;
+    max-height: 38px;
     max-width: 130px;
     display: flex;
     justify-content: center;
