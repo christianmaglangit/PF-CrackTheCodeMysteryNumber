@@ -77,8 +77,10 @@ let initialRemainingGuesses;
 document.getElementById("guessField").disabled = true;
 document.getElementById("submitGuessButton").disabled = true;
 document.getElementById("giveUpButton").disabled = true;
+
 function setDifficulty() {
   const difficulty = document.getElementById("difficulty").value;
+  const selectElement = document.getElementById("difficulty");
   switch (difficulty) {
     case "easy":
       minNumber = 1;
@@ -87,6 +89,7 @@ function setDifficulty() {
       guessField.disabled = false;
       submitGuessButton.disabled = false;
       giveUpButton.disabled = false;
+      selectElement.style.border = "none";
       break;
     case "medium":
       minNumber = 1;
@@ -95,6 +98,7 @@ function setDifficulty() {
       guessField.disabled = false;
       submitGuessButton.disabled = false;
       giveUpButton.disabled = false;
+      selectElement.style.border = "none";
       break;
     case "hard":
       minNumber = 1;
@@ -103,6 +107,7 @@ function setDifficulty() {
       guessField.disabled = false;
       submitGuessButton.disabled = false;
       giveUpButton.disabled = false;
+      selectElement.style.border = "none";
       break;
     default:
       minNumber = 1;
