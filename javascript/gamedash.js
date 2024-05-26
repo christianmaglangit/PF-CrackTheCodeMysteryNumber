@@ -216,6 +216,7 @@ function checkGuess() {
     document.getElementById("nextGuessButton").style.display = "inline-block";
 
     if (score === 5) {
+      message.style.display = "none";
       congratsMessage.style.display = "block";
       document.getElementById("startAgainButton").style.display =
         "inline-block";
