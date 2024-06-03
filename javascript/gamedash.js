@@ -61,7 +61,6 @@ document
     clickSound.play();
   });
 //here for presentation
-
 // document.getElementById("secretButton").addEventListener("click", function () {
 //   const clickSound = document.getElementById("click");
 //   clickSound.play();
@@ -141,7 +140,6 @@ function resetGame() {
   document.getElementById("score").textContent = score;
   guessedCorrectly = false;
   document.getElementById("nextGuessButton").style.display = "none";
-
   // Show all buttons except the "Start Again" button
   document.getElementById("submitGuessButton").style.display = "inline-block";
   document.getElementById("giveUpButton").style.display = "inline-block";
@@ -256,7 +254,7 @@ function decrementRemainingGuesses() {
     document.getElementById("selectdif").style.display = "inline-block";
     document.getElementById("submitGuessButton").style.display = "none";
     document.getElementById("giveUpButton").style.display = "none";
-    //secret button Here
+
     //here for presentation
     // document.getElementById("secretButton").style.display = "none";
     document.getElementById("startAgainButton").style.display = "inline-block";
@@ -348,6 +346,7 @@ function nextGuess() {
   resetGame();
 }
 
+//here for presentation
 // function revealSecret() {
 //   alert(`The secret number is ${randomNumber}`);
 // }
