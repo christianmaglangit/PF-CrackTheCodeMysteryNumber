@@ -60,6 +60,8 @@ document
     const clickSound = document.getElementById("click");
     clickSound.play();
   });
+//here for presentation
+
 // document.getElementById("secretButton").addEventListener("click", function () {
 //   const clickSound = document.getElementById("click");
 //   clickSound.play();
@@ -143,6 +145,7 @@ function resetGame() {
   // Show all buttons except the "Start Again" button
   document.getElementById("submitGuessButton").style.display = "inline-block";
   document.getElementById("giveUpButton").style.display = "inline-block";
+  //here for presentation
   // document.getElementById("secretButton").style.display = "inline-block";
   document.getElementById("startAgainButton").style.display = "none";
 
@@ -254,6 +257,7 @@ function decrementRemainingGuesses() {
     document.getElementById("submitGuessButton").style.display = "none";
     document.getElementById("giveUpButton").style.display = "none";
     //secret button Here
+    //here for presentation
     // document.getElementById("secretButton").style.display = "none";
     document.getElementById("startAgainButton").style.display = "inline-block";
     score = 0; // Reset score only when the game is over
